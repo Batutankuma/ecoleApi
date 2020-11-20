@@ -1,8 +1,8 @@
 const database = require('../config/database');
 const Sequelize = require('sequelize');
 //table externe
-const Agentcontrollers = require('./agentcontroller');
-const Titeurcontrollers = require('./titeurscontroller');
+const Agentcontrollers = require('./agentController');
+const Titeurcontrollers = require('./titeursController');
 const Categoricontrollers = require('./categorieCategorie');
 const Classcontrollers = require('./classeController');
 

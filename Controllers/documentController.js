@@ -1,8 +1,8 @@
 const database = require('../config/database');
 const Sequelize = require('sequelize');
 //table externe
-const Agentcontrollers = require('./agentcontroller');
-const Elevecontrollers = require('./elevecontroller');
+const Agentcontrollers = require('./agentController');
+const Elevecontrollers = require('./eleveController');
 
 const documentcontrollers = database.define('Document',{
     numero:{type:Sequelize.STRING,unique:true},

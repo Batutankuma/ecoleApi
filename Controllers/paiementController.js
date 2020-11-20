@@ -1,10 +1,10 @@
 const database = require('../config/database');
 const Sequelize = require('sequelize');
 //table externe
-const Agentcontrollers = require('./agentcontroller');
-const Titeurcontrollers = require('./titeurscontroller');
-const Elevecontrollers = require('./elevecontroller');
-const Fraiscontrollers = require('./fraiscontroller');
+const Agentcontrollers = require('./agentController');
+const Titeurcontrollers = require('./titeursController');
+const Elevecontrollers = require('./eleveController');
+const Fraiscontrollers = require('./fraisController');
 
 const paiementcontrollers = database.define('Paiment',{
     id:{type:Sequelize.INTEGER,primaryKey:true,autoIncrement:true},
