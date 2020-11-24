@@ -27,7 +27,15 @@ class Agent {
             res.status(400).json(error);
         });
     }
-
+    //read all
+    static readl(){
+        return agentsController.findAll()
+        .then((response) => {
+            return resolve(response);
+        }).catch((error) => {
+            return reject(error);
+        });
+    }
     //read id and matricule
     static readmatri(matricule) {
         return new Promise((resolve,reject)=>{
