@@ -5,6 +5,10 @@ const DocumentModels = require('../models/documentModels');
 
 //all 
 router.get('/document/all', (req, res) => {
+    var documentRead = DocumentModels.readall();
+    documentRead.then((result)=>{
+        res.json(result);
+    }).catch((error)=> res.json(error));
 });
 
 //id

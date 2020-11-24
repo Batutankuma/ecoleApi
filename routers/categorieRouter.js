@@ -5,6 +5,10 @@ const CategorieModels = require('../models/categorieModels');
 
 //all 
 router.get('/categorie/all', (req, res) => {
+    var categorieRead = CategorieModels.readall();
+    categorieRead.then((result)=>{
+        res.json(result);
+    }).catch((error)=> res.json(error));
 });
 
 //id

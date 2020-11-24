@@ -5,6 +5,10 @@ const ClasseModels = require('./../models/classeModels');
 
 //all 
 router.get('/classe/all', (req, res) => {
+    var classeRead = ClasseModels.readall();
+    classeRead.then((result)=>{
+        res.json(result);
+    }).catch((error)=> res.json(error));
 });
 
 //id
