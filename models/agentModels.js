@@ -28,7 +28,7 @@ class Agent {
         });
     }
     //read all
-    static readl(){
+    static readall(){
         return agentsController.findAll()
         .then((response) => {
             return resolve(response);

@@ -5,6 +5,10 @@ const AgentModels = require('./../models/agentModels');
 
 //all 
 router.get('/agent/all', (req, res) => {
+    var agentRead = AgentModels.readall();
+    agentRead.then((result)=>{
+        res.json(result);
+    }).catch((error)=> res.json(error));
 });
 
 //matricule
