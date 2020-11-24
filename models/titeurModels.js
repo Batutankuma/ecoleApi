@@ -28,6 +28,16 @@ class Titeur {
         });
     }
 
+    //read all
+    static readall(){
+        return titeurController.findAll()
+        .then((response) => {
+            return resolve(response);
+        }).catch((error) => {
+            return reject(error);
+        });
+    }
+
     //read id and matricule
     static readId(id) {
         return new Promise((resolve,reject)=>{

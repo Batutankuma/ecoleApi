@@ -40,6 +40,17 @@ class Eleve {
             res.status(400).json(error);
         });
     }
+
+    //read all
+    static readall(){
+        return eleveModels.findAll()
+        .then((response) => {
+            return resolve(response);
+        }).catch((error) => {
+            return reject(error);
+        });
+    }
+
     //read id 
     static readId(id) {
         return new Promise((resolve, reject) => {

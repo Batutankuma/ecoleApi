@@ -33,6 +33,16 @@ class Paiement {
         });
     }
 
+    //read all
+    static readall(){
+        return paiementFrais.findAll()
+        .then((response) => {
+            return resolve(response);
+        }).catch((error) => {
+            return reject(error);
+        });
+    }
+
     //read id and matricule
     static readId(res, id) {
         paiementModels.findAll({ where: { id: id} })

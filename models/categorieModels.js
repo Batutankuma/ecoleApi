@@ -17,6 +17,16 @@ class Categorie {
             res.status(400).json(error);
         });
     }
+    
+    //read all
+    static readall(){
+        return categorieModels.findAll()
+        .then((response) => {
+            return resolve(response);
+        }).catch((error) => {
+            return reject(error);
+        });
+    }
 
     //read id and matricule
     static readId(res, id) {

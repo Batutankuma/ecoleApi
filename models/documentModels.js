@@ -23,6 +23,16 @@ class Document {
         });
     }
 
+    //read all
+    static readall(){
+        return documentModels.findAll()
+        .then((response) => {
+            return resolve(response);
+        }).catch((error) => {
+            return reject(error);
+        });
+    }
+
     //read id and matricule
     static readId(res, id) {
         documentModels.findAll({ where: { id: id} })
