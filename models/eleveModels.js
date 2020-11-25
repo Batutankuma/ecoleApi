@@ -44,11 +44,8 @@ class Eleve {
     //read all
     static readall(){
         return eleveModels.findAll()
-        .then((response) => {
-            return resolve(response);
-        }).catch((error) => {
-            return reject(error);
-        });
+        .then((result)=> result)
+        .catch((error)=> error);
     }
 
     //read id 

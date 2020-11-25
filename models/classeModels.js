@@ -22,11 +22,8 @@ class Classe {
     //read all
     static readall(){
         return classeModels.findAll()
-        .then((response) => {
-            return resolve(response);
-        }).catch((error) => {
-            return reject(error);
-        });
+        .then((result)=> result)
+        .catch((error)=> error);
     }
 
     //read id and matricule

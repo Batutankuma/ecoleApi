@@ -30,11 +30,8 @@ class Agent {
     //read all
     static readall(){
         return agentsController.findAll()
-        .then((response) => {
-            return resolve(response);
-        }).catch((error) => {
-            return reject(error);
-        });
+        .then((result)=> result)
+        .catch((error)=> error);
     }
     //read id and matricule
     static readmatri(matricule) {

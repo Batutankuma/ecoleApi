@@ -35,12 +35,9 @@ class Paiement {
 
     //read all
     static readall(){
-        return paiementFrais.findAll()
-        .then((response) => {
-            return resolve(response);
-        }).catch((error) => {
-            return reject(error);
-        });
+        return paiementModels.findAll()
+        .then((result)=> result)
+        .catch((error)=> error);
     }
 
     //read id and matricule

@@ -5,10 +5,10 @@ const AgentModels = require('./../models/agentModels');
 
 //all 
 router.get('/agent/all', (req, res) => {
+    console.log("ici agent");
     var agentRead = AgentModels.readall();
-    agentRead.then((result)=>{
-        res.json(result);
-    }).catch((error)=> res.json(error));
+    agentRead.then((result)=> res.json(result))
+    .catch((error)=> res.json(error));
 });
 
 //matricule

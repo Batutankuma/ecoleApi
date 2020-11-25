@@ -26,11 +26,8 @@ class Document {
     //read all
     static readall(){
         return documentModels.findAll()
-        .then((response) => {
-            return resolve(response);
-        }).catch((error) => {
-            return reject(error);
-        });
+        .then((result)=> result)
+        .catch((error)=> error);
     }
 
     //read id and matricule
