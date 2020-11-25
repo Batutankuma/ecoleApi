@@ -6,9 +6,8 @@ const TiteurModels = require('./../models/titeurModels');
 //all 
 router.get('/titeur/all', (req, res) => {
     var titeurRead = TiteurModels.readall();
-    titeurRead.then((result)=>{
-        res.json(result);
-    }).catch((error)=> res.json(error));
+    titeurRead.then((result)=> res.json(result))
+    .catch((error)=> res.json(error));
 });
 
 //id

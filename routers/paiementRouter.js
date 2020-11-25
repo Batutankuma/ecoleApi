@@ -5,10 +5,9 @@ const router = express.Router();
 
 //all 
 router.get('/paiement/all', (req, res) => {
-    var paiementFraisRead = paiementFrais.readall();
-    paiementFraisRead.then((result)=>{
-        res.json(result);
-    }).catch((error)=> res.json(error));
+    var paiementRead = paiementFrais.readall();
+    paiementRead.then((result)=> res.json(result))
+    .catch((error)=> res.json(error));
 });
 
 //id

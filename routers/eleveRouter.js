@@ -6,9 +6,8 @@ const EleveModels = require('./../models/eleveModels');
 //all 
 router.get('/eleve/all', (req, res) => {
     var eleveRead = EleveModels.readall();
-    eleveRead.then((result)=>{
-        res.json(result);
-    }).catch((error)=> res.json(error));
+    eleveRead.then((result)=> res.json(result))
+    .catch((error)=> res.json(error));
 });
 
 //id
