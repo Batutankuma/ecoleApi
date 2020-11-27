@@ -22,7 +22,6 @@ router.post('/eleve/create', (req, res) => {
     var nom = req.body.nom;
     var prenom = req.body.prenom;
     var date = new Date();
-    //true == hom and false == fem
     var sexe = req.body.sexe;
     var annee_a = req.body.annee_a;
     var annee_b = req.body.annee_b;
