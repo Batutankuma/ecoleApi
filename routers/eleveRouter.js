@@ -10,7 +10,7 @@ router.get('/eleve/all', (req, res) => {
     .catch((error)=> res.json(error));
 });
 
-//id
+//ids
 router.get('/eleve/id/:id', (req, res) => {
     var eleve = EleveModels.readId(req.params.id);
     eleve.then((response)=>  res.json(response))
@@ -21,7 +21,7 @@ router.get('/eleve/id/:id', (req, res) => {
 router.post('/eleve/create', (req, res) => {
     var nom = req.body.nom;
     var prenom = req.body.prenom;
-    var date = new Date();
+    var date = new Date(); 
     var sexe = req.body.sexe;
     var annee_a = req.body.annee_a;
     var annee_b = req.body.annee_b;
