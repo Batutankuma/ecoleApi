@@ -10,7 +10,6 @@ class Document {
 
     //create
     create(res) {
-        console.log(this.eleve);
         documentModels.create({
             nom: this.nom,
             numero:this.numero,

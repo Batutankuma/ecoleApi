@@ -4,7 +4,7 @@ const FraisModels = require('../models/fraisModels');
 
 
 //all 
-router.get('/frias/all', (req, res) => {
+router.get('/frais/all', (req, res) => {
     var fraisRead = FraisModels.readall();
     fraisRead.then((result)=> res.json(result))
     .catch((error)=> res.json(error));
@@ -19,7 +19,6 @@ router.get('/frais/id/:id', (req, res) => {
 
 //create
 router.post('/frais/create', (req, res) => {
-    console.log(req.body);
     var titre = req.body.titre;
     var montant = req.body.montant;
     var categorie = req.body.categorie;

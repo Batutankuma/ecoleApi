@@ -6,7 +6,7 @@ const Agentcontrollers = require('./agentController');
 const titeurcontrollers = database.define('Titeurs',{
     nom:{type:Sequelize.STRING},
     prenom:{type:Sequelize.STRING},
-    telephone:{type:Sequelize.INTEGER},
+    telephone:{type:Sequelize.STRING},
     password:{type:Sequelize.STRING},
     avatar:{type:Sequelize.TEXT},
 });

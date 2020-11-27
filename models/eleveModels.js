@@ -11,7 +11,7 @@ class Eleve {
         this.postnom = postnom;
         this.data_nais = data_nais;
         this.sexe = sexe;
-        this.anne_a = anne_a; 
+        this.anne_a = anne_a;
         this.anne_b = anne_b;
         this.avatar = avatar;
         this.agent = agent;
@@ -42,27 +42,20 @@ class Eleve {
     }
 
     //read all
-    static readall(){
+    static readall() {
         return eleveModels.findAll()
-        .then((result)=> result)
-        .catch((error)=> error);
+            .then((result) => result)
+            .catch((error) => error);
     }
 
     //read id 
     static readId(id) {
-        return new Promise((resolve, reject) => {
-            eleveModels.findByPk(id,{include:[
-                {model:categorieModels},
-                {model:agentModels},
-                {model:titeurModels},
-                {model:classeModels}
-            ]})
-                .then((response) => {
-                    return resolve(response);
-                }).catch((error) => {
-                    return reject(error);
-                });
-        })
+        return eleveModels.findAll({where:{id:id}})
+            .then((result)=>{
+                result = result[0].id;
+                return result;
+            })
+            .catch((error) => error);
     }
 }
 

@@ -24,8 +24,6 @@ function getToken(client_Id, client_Secret,res){
         })
         .on('error',function(e){});
         req.write(postData);
-        console.log("****");
-        console.log(postData);
         req.end()
     } catch (error) {
         

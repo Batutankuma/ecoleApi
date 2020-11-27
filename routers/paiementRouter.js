@@ -1,5 +1,5 @@
 const express = require('express');
-const paiementFrais = require('../modules/paieModules');
+const paiementFrais = require('./../modules/paieModules');
 const router = express.Router();
 
 
@@ -12,7 +12,7 @@ router.get('/paiement/all', (req, res) => {
 
 //id
 router.get('/paiement/id/:id', (req, res) => {
-   FraisModels.readId(res,req.params.id);
+   paiementFrais.readId(res,req.params.id);
 });
 
 //create

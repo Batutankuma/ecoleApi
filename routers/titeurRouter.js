@@ -27,7 +27,7 @@ router.post('/titeur/create', (req, res) => {
     var avatar = req.body.avatar;
     var agent = req.body.agent;
 
-    var titeur = new TiteurModels(nom,prenom,telephone,password,avatar,adresse,agent);
+    var titeur = new TiteurModels(nom,prenom,telephone.toString(),password,avatar,adresse,agent);
     titeur.create(res);
 });
 //update

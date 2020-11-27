@@ -19,7 +19,7 @@ class Titeur {
             password: this.password,
             telephone:this.telephone,
             avatar: this.avatar,
-            adresse : this.adresse,
+            //adresse : this.adresse,
             AgentId:this.agent
         }).then((response) => {
             res.status(200).json(response);

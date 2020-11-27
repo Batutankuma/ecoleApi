@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const cors = require('cors');
-const Port = process.env.PORT || 3000;
+const Port = process.env.PORT || 7000;
 const app = express();
 const sms = require('./modules/smsenvoi');
 

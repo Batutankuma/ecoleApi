@@ -8,7 +8,6 @@ class Classe {
 
     //create
     create(res) {
-        console.log(this.agent);
         classeModels.create({
             nom: this.nom,
             AgentId: this.agent,

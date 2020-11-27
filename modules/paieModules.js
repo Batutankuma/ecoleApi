@@ -3,12 +3,11 @@ const fraisModels = require('./../models/fraisModels');
 const PaiementModule = require('./../models/paiementModels');
 
 async function paiementFrais(eleve, frais, montant,titeur,agent, res) {
-    console.log("************" + frais);
     const eleves = await eleveModels.readId(eleve);
     const fraiss = await fraisModels.readId(frais);
     const montantPaie = montant;
-    const fraisCat = fraiss.Categorie.nom;
-    const eleveCat = eleves.Categorie.nom;
+    var fraisCat = fraiss.Categorie.CategorieId;
+    var eleveCat = eleves.CategorieId;
     if (fraisCat === eleveCat) {
         if (montantPaie > fraiss.montant) {
             res.status(400).json('montant est superieur');
