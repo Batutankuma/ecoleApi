@@ -6,7 +6,7 @@ async function paiementFrais(eleve, frais, montant,titeur,agent, res) {
     const eleves = await eleveModels.readId(eleve);
     const fraiss = await fraisModels.readId(frais);
     const montantPaie = montant;
-    var fraisCat = fraiss.Categorie.CategorieId;
+    var fraisCat = fraiss.Categorie.id;
     var eleveCat = eleves.CategorieId;
     if (fraisCat === eleveCat) {
         if (montantPaie > fraiss.montant) {

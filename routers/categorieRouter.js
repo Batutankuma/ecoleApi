@@ -17,6 +17,7 @@ router.get('/categorie/id/:id', (req, res) => {
 
 //create
 router.post('/categorie/create', (req, res) => {
+    console.log(req.body);
     var nom = req.body.nom;
     var agent = req.body.agent;
     var classe = new CategorieModels(nom,agent);

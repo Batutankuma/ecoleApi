@@ -5,10 +5,9 @@ const categorieModels = require('./../Controllers/categorieCategorie');
 const classeModels = require('./../Controllers/classeController');
 
 class Eleve {
-    constructor(nom, prenom, postnom, data_nais, sexe, anne_a, anne_b, avatar, agent, titeur, categorie, classe) {
+    constructor(nom, prenom, data_nais, sexe, anne_a, anne_b, avatar, agent, titeur, categorie, classe) {
         this.nom = nom
         this.prenom = prenom;
-        this.postnom = postnom;
         this.data_nais = data_nais;
         this.sexe = sexe;
         this.anne_a = anne_a;
@@ -24,8 +23,7 @@ class Eleve {
         eleveModels.create({
             nom: this.nom,
             prenom: this.prenom,
-            postnom: this.postnom,
-            data_nais: this.data_nais,
+            data_naissance: this.data_nais,
             sexe: this.sexe,
             anne_a: this.anne_a,
             anne_b: this.anne_b,

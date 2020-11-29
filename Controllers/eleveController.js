@@ -12,7 +12,7 @@ const elevecontrollers = database.define('Eleve',{
     data_naissance:{type:Sequelize.DATE},
     anne_a:{type:Sequelize.INTEGER},
     anne_b:{type:Sequelize.INTEGER},
-    sexe:{type:Sequelize.BOOLEAN},
+    sexe:{type:Sequelize.STRING},
     avatar:{type:Sequelize.STRING},
 });
 
