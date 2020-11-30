@@ -1,11 +1,12 @@
 const express = require('express');
 const paiementFrais = require('./../modules/paieModules');
+const paiementModels = require('./../models/paiementModels');
 const router = express.Router();
 
 
 //all 
 router.get('/paiement/all', (req, res) => {
-    var paiementRead = paiementFrais.readall();
+    var paiementRead = paiementModels.readall();
     paiementRead.then((result)=> res.json(result))
     .catch((error)=> res.json(error));
 });
@@ -22,6 +23,7 @@ router.post('/paiement/create', (req, res) => {
     var eleve = req.body.eleve;
     var titeur = req.body.titeur;
     var agent = req.body.agent;
+    console.log(req.body);
     paiementFrais(eleve,frais,montant,titeur,agent,res);
 });
 

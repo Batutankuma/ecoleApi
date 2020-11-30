@@ -6,24 +6,22 @@ const EleveModels = require('./../models/eleveModels');
 //all 
 router.get('/eleve/all', (req, res) => {
     var eleveRead = EleveModels.readall();
-    eleveRead.then((result)=> res.json(result))
-    .catch((error)=> res.json(error));
+    eleveRead.then((result) => res.json(result))
+        .catch((error) => res.json(error));
 });
 
-//ids
+//id
 router.get('/eleve/id/:id', (req, res) => {
     var eleve = EleveModels.readId(req.params.id);
-    eleve.then((response)=>  res.json(response))
-    .catch((error)=> res.status(400).json(error));
+    eleve.then((response) => res.json(response))
+        .catch((error) => res.status(400).json(error));
 });
 
 //create
 router.post('/eleve/create', (req, res) => {
-    console.log("**************************************");
-    console.log(req.body);
     var nom = req.body.nom;
     var prenom = req.body.prenom;
-    var date = new Date(); 
+    var date = new Date();
     var sexe = req.body.sexe;
     var annee_a = parseInt(req.body.annee_a);
     var annee_b = parseInt(req.body.annee_b);
@@ -31,9 +29,9 @@ router.post('/eleve/create', (req, res) => {
     var agent = req.body.agent;
     var titeur = parseInt(req.body.titeur);
     var categorie = parseInt(req.body.categorie);
-    var classe =parseInt(req.body.classe);
+    var classe = parseInt(req.body.classe);
 
-    var eleve = new EleveModels(nom,prenom,date,sexe,annee_a,annee_b,avatar,agent,titeur,categorie,classe);
+    var eleve = new EleveModels(nom, prenom, date, sexe, annee_a, annee_b, avatar, agent, titeur, categorie, classe);
     eleve.create(res);
 });
 //update

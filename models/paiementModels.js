@@ -5,6 +5,8 @@ const fraisModels = require('./fraisModels');
 const agentModels = require('./agentModels');
 const paimentModule = require('./../modules/paieModules');
 const paiementFrais = require('./../modules/paieModules');
+const message = require('../modules/smsenvoi');
+const messageA = require('../modules/smsenvoi');
 
 class Paiement {
     constructor(montant, frais, eleve, titeur, agent, montantRest) {
@@ -27,6 +29,7 @@ class Paiement {
             AgentId: this.agent
         }).then((response) => {
             res.status(200).json(response);
+            messageA(response.TiteurId,response.FraiId,response.EleveId,response.montant,response.montantRest,res);
         }).catch((error) => {
             res.status(400).json(error);
         });

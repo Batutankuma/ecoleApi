@@ -47,13 +47,15 @@ class Eleve {
     }
 
     //read id 
-    static readId(id) {
-        return eleveModels.findAll({where:{id:id}})
-            .then((result)=>{
-                result = result[0].id;
-                return result;
+    static readId(id,res) {
+        return new Promise((resolve, reject) => {
+            eleveModels.findByPk(id,{include:categorieModels})
+                    .then((response) => {
+                        return resolve(response);
+                    }).catch((error) => {
+                        return reject(error);
+                    });
             })
-            .catch((error) => error);
     }
 }
 
